@@ -1,0 +1,130 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.attribution {
+     font-size: 11px; text-align: center; 
+}
+
+.attribution a {
+     color: hsl(228, 45%, 44%); 
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: peachpuff;
+}
+
+.container{
+    max-width: 500px;
+    display: flex;
+    background-color: white;
+    border-radius: 8px;
+}
+
+.image{
+    width: 50%;
+
+    & img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-top-left-radius: 8px;
+        border-bottom-left-radius: 8px;
+    }
+}
+
+.content{
+    width: 50%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+    & #perfume{
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        font-family: Montserrat;
+    }
+
+    & h1{
+        font-family: Fraunces;
+        font-weight: 700;
+    }
+
+    & p{
+        line-height: 1.4;
+        font-family: Montserrat;
+    }
+
+    & div{
+        display: flex;
+
+        & #price{
+            margin-right: 20px;
+            font-size: 30px;
+            color: green;
+            font-family: Fraunces;
+            font-weight: 500;
+        }
+
+        & #reduced{
+            text-decoration: line-through;
+        }
+    }
+
+    & button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: green;
+        color: white;
+        width: 100%;
+        padding: 10px;
+        border-radius: 10px;
+        border: none;
+        font-size: 1rem;
+
+        & img{
+            
+
+        }
+
+    }
+}
+
+@media (max-width: 768px) {
+    body{
+        background-color: peachpuff;
+    }
+    .container{
+        flex-direction: column;
+        /* height: 100%; */
+        justify-content: center;
+        margin: 15px 10px;
+
+    }
+
+    .image{
+        width: 100%;
+
+        & img{
+            border-bottom-left-radius: 0;
+            border-top-right-radius: 8px;
+            content: url(./images/image-product-mobile.jpg);
+        }
+
+    }
+
+    .content{
+        width: 100%;
+        
+    }
+}
